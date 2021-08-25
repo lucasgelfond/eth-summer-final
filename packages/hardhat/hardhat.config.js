@@ -50,8 +50,12 @@ module.exports = {
   // (you will need to restart the `yarn run start` dev server after editing the .env)
 
   networks: {
+    hardhat: {
+      chainId: 31337
+    },
     localhost: {
       url: "http://localhost:8545",
+      chainId: 31337,
       /*
         notice no mnemonic here? it will just use account 0 of the hardhat node to deploy
         (you can put in a mnemonic here to set the deployer locally)
