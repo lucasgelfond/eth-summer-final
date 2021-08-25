@@ -21,7 +21,7 @@ import {
   useUserSigner,
 } from "./hooks";
 // import Hints from "./Hints";
-import { ExampleUI, Hints, Subgraph } from "./views";
+import { ExampleUI, Hints, Subgraph, OurApp } from "./views";
 import Portis from "@portis/web3";
 import Fortmatic from "fortmatic";
 import Authereum from "authereum";
@@ -437,6 +437,14 @@ function App(props) {
       {networkDisplay}
       <BrowserRouter>
         <Menu style={{ textAlign: "center" }} selectedKeys={[route]} mode="horizontal">
+          <Menu.Item key="/ourapp">
+            <Link 
+            onClick={() => {
+              setRoute("/ourapp");
+            }} to="/ourapp">
+              OurApp
+            </Link>
+          </Menu.Item>
           <Menu.Item key="/">
             <Link
               onClick={() => {
@@ -504,6 +512,21 @@ function App(props) {
               address={address}
               blockExplorer={blockExplorer}
             />
+            <Route path="/ourapp">
+              <OurApp
+                address={address}
+                userSigner={userSigner}
+                mainnetProvider={mainnetProvider}
+                localProvider={localProvider}
+                yourLocalBalance={yourLocalBalance}
+                price={price}
+                tx={tx}
+                writeContracts={writeContracts}
+                readContracts={readContracts}
+                purpose={purpose}
+                setPurposeEvents={setPurposeEvents}
+              />
+            </Route>
           </Route>
           <Route path="/hints">
             <Hints
