@@ -309,8 +309,8 @@ function App(props) {
             message="⚠️ Wrong Network"
             description={
               <div>
-                You have <b>{networkSelected && networkSelected.name}</b> selected and you need to be on{" "}
-                <Button
+                {/* You have <b>{networkSelected && networkSelected.name}</b> selected and you need to be on{" "} */}
+                {/* <Button
                   onClick={async () => {
                     const ethereum = window.ethereum;
                     const data = [
@@ -349,7 +349,7 @@ function App(props) {
                   }}
                 >
                   <b>{networkLocal && networkLocal.name}</b>
-                </Button>
+                </Button> */}
                 .
               </div>
             }
@@ -483,7 +483,7 @@ function App(props) {
       <ThemeSwitch />
 
       {/* 👨‍💼 Your account is in the top right with a wallet at connect options */}
-      <div style={{ position: "fixed", textAlign: "right", right: 0, top: 0, padding: 10 }}>
+      {/* <div style={{ position: "fixed", textAlign: "right", right: 0, top: 0, padding: 10 }}>
         <Account
           address={address}
           localProvider={localProvider}
@@ -496,7 +496,7 @@ function App(props) {
           blockExplorer={blockExplorer}
         />
         {faucetHint}
-      </div>
+      </div> */}
 
       {/* 🗺 Extra UI like gas price, eth price, faucet, and support: */}
       <div style={{ position: "fixed", textAlign: "left", left: 0, bottom: 20, padding: 10 }}>
