@@ -512,7 +512,8 @@ function App(props) {
               address={address}
               blockExplorer={blockExplorer}
             />
-            <Route path="/ourapp">
+          </Route>
+                      <Route path="/ourapp">
               <OurApp
                 address={address}
                 userSigner={userSigner}
@@ -527,7 +528,6 @@ function App(props) {
                 setPurposeEvents={setPurposeEvents}
               />
             </Route>
-          </Route>
           <Route path="/hints">
             <Hints
               address={address}
