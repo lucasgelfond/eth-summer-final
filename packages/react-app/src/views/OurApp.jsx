@@ -19,9 +19,15 @@ export default function OurApp({
 }) {
   const [newPurpose, setNewPurpose] = useState("loading...");
   const gridStyle = {
-      width: '25%',
+      width: '33%',
       textAlign: 'center',
     };
+    const flyLoCovers = ['https://images-na.ssl-images-amazon.com/images/I/91voJ-1QPOL._SL1454_.jpg', 
+    'https://images-na.ssl-images-amazon.com/images/I/91KVuR4tctL._SL1500_.jpg',
+    'https://assets.boomkat.com/spree/products/198728/large/original.jpg',
+    'https://f4.bcbits.com/img/a1914769065_10.jpg',
+    'https://media.pitchfork.com/photos/5929bfb4eb335119a49ed27d/1:1/w_600/188e5d6c.jpg',
+    'https://media.pitchfork.com/photos/608ab9a564a4ccd15fc1fdd5/1:1/w_600/Flying-Lotus-Yasuke.jpeg']
   
 
 
@@ -58,14 +64,12 @@ export default function OurApp({
         Your Address:
         <Address address={address} ensProvider={mainnetProvider} fontSize={16} />
           <Card title="Flying Lotus">
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
+          <GridItem src={flyLoCovers[0]}/>
+          <GridItem src={flyLoCovers[0]}/>
+          <GridItem src={flyLoCovers[2]}/>
+          <GridItem src={flyLoCovers[3]}/>
+          <GridItem src={flyLoCovers[4]}/>
+          <GridItem src={flyLoCovers[5]}/>
   </Card>
       </div>
     </div>
