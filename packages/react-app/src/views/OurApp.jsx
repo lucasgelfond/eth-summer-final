@@ -39,12 +39,17 @@ export default function OurApp({
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 800, margin: "auto", marginTop: 64 }}>
         <h2>Purchase Music</h2>
         <Divider />
-               <Divider />
         {/* use utils.formatEther to display a BigNumber: */}
         <h2>Your Balance: {yourLocalBalance ? utils.formatEther(yourLocalBalance) : "..."}</h2>
+                <Address address={address} ensProvider={mainnetProvider} fontSize={16} />
+
         <Divider />
         <div style={{ margin: 8 }}>
-          <Button
+        </div>
+        Your Address:
+        <h2>Flying Lotus </h2>
+
+                 <Button
             onClick={() => {
               /*
               you can also just craft a transaction and send it to the tx() transactor
@@ -57,13 +62,37 @@ export default function OurApp({
               /* this should throw an error about "no fallback nor receive function" until you add it */
             }}
           >
-            Send Value
+            Buy Artist Discography
           </Button>
 
-        </div>
-        Your Address:
-        <Address address={address} ensProvider={mainnetProvider} fontSize={16} />
-          <Card title="Flying Lotus">
+          <Card>
+          <GridItem src={flyLoCovers[0]}/>
+          <GridItem src={flyLoCovers[0]}/>
+          <GridItem src={flyLoCovers[2]}/>
+          <GridItem src={flyLoCovers[3]}/>
+          <GridItem src={flyLoCovers[4]}/>
+          <GridItem src={flyLoCovers[5]}/>
+  </Card>
+
+      <h2>Aphex Twin </h2>
+
+                 <Button
+            onClick={() => {
+              /*
+              you can also just craft a transaction and send it to the tx() transactor
+              here we are sending value straight to the contract's address:
+            */
+              tx({
+                to: writeContracts.YourContract.address,
+                value: utils.parseEther("0.001"),
+              });
+              /* this should throw an error about "no fallback nor receive function" until you add it */
+            }}
+          >
+            Buy Artist Discography
+          </Button>
+
+          <Card>
           <GridItem src={flyLoCovers[0]}/>
           <GridItem src={flyLoCovers[0]}/>
           <GridItem src={flyLoCovers[2]}/>
