@@ -33,19 +33,7 @@ export default function OurApp({
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 800, margin: "auto", marginTop: 64 }}>
         <h2>Purchase Music</h2>
         <Divider />
-        Your Address:
-        <Address address={address} ensProvider={mainnetProvider} fontSize={16} />
-          <Card title="Flying Lotus">
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-          <GridItem />
-  </Card>,
-        <Divider />
+               <Divider />
         {/* use utils.formatEther to display a BigNumber: */}
         <h2>Your Balance: {yourLocalBalance ? utils.formatEther(yourLocalBalance) : "..."}</h2>
         <Divider />
@@ -67,6 +55,18 @@ export default function OurApp({
           </Button>
 
         </div>
+        Your Address:
+        <Address address={address} ensProvider={mainnetProvider} fontSize={16} />
+          <Card title="Flying Lotus">
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+  </Card>
       </div>
     </div>
   );
