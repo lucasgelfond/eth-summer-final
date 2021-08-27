@@ -2,7 +2,8 @@ import { SyncOutlined } from "@ant-design/icons";
 import { utils } from "ethers";
 import { Button, Card, DatePicker, Divider, Input, List, Progress, Slider, Spin, Switch } from "antd";
 import React, { useState } from "react";
-import { Address, Balance } from "../components";
+import { Address, Balance, GridItem } from "../components";
+
 
 export default function OurApp({
   purpose,
@@ -17,6 +18,12 @@ export default function OurApp({
   writeContracts,
 }) {
   const [newPurpose, setNewPurpose] = useState("loading...");
+  const gridStyle = {
+      width: '25%',
+      textAlign: 'center',
+    };
+  
+
 
   return (
     <div>
@@ -28,6 +35,16 @@ export default function OurApp({
         <Divider />
         Your Address:
         <Address address={address} ensProvider={mainnetProvider} fontSize={16} />
+          <Card title="Flying Lotus">
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+  </Card>,
         <Divider />
         {/* use utils.formatEther to display a BigNumber: */}
         <h2>Your Balance: {yourLocalBalance ? utils.formatEther(yourLocalBalance) : "..."}</h2>
